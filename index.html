@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b4b53">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="description" content="الأحمدي لإدارة عدادات الكهرباء - إدارة المشتركين والاشتراكات والتدفقات والحسابات المالية">
+  <title>الأحمدي لإدارة عدادات الكهرباء</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon-192.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=13.12.0">
+</head>
+<body>
+  <section id="loginView" class="login-view">
+    <div class="login-shell">
+      <div class="login-brand-panel">
+        <img src="logo.jpg" class="login-logo" alt="شعار الأحمدي">
+        <div>
+          <span class="eyebrow">منصة إدارة الكهرباء</span>
+          <h1 id="loginAppName">الأحمدي لإدارة عدادات الكهرباء</h1>
+          <p>إدارة المشتركين والاشتراكات والتدفقات المالية والحسابات من واجهة واحدة.</p>
+        </div>
+        <div class="brand-points">
+          <span>حفظ محلي</span><span>يعمل كتطبيق</span><span>واجهة RTL</span>
+        </div>
+      </div>
+
+      <div class="login-card-wrap">
+        <div class="login-card">
+          <div class="login-card-head">
+            <div class="mobile-brand">
+              <img src="logo.jpg" alt="الشعار"><div><strong id="mobileLoginAppName">الأحمدي لإدارة عدادات الكهرباء</strong><small>إدارة المنصة</small></div>
+            </div>
+            <div class="login-tools">
+              <button id="langAr" class="lang-btn active" type="button" aria-label="العربية">AR</button>
+              <button id="langEn" class="lang-btn" type="button" aria-label="English">EN</button>
+              <button id="loginInstallBtn" class="icon-button install-outline" type="button" title="تثبيت التطبيق"></button>
+            </div>
+          </div>
+          <div class="login-copy">
+            <span class="eyebrow">دخول آمن على هذا الجهاز</span>
+            <h2 id="loginTitle">تسجيل الدخول</h2>
+            <p id="loginSubtitle">أدخل مفتاح الشركة وكلمة المرور للوصول إلى المنصة.</p>
+          </div>
+          <form id="loginForm" autocomplete="on">
+            <div class="field">
+              <label id="companyKeyLabel" for="companyKeyInput">مفتاح الشركة</label>
+              <input id="companyKeyInput" type="text" autocomplete="username" placeholder="أدخل مفتاح الشركة" required>
+              <small id="companyKeyHint">المفتاح الخاص بالشركة ويمكن تغييره لاحقاً من الإعدادات.</small>
+            </div>
+            <div class="field field-password">
+              <label id="passwordLabel" for="passwordInput">كلمة المرور</label>
+              <input id="passwordInput" type="password" autocomplete="current-password" placeholder="أدخل كلمة المرور" required>
+              <button id="toggleLoginPassword" type="button" class="field-icon-btn" aria-label="إظهار كلمة المرور"></button>
+              <small id="passwordHint">يتم حفظ جلسة الدخول محلياً على هذا الجهاز.</small>
+            </div>
+            <button id="loginBtn" class="primary-button wide" type="submit">دخول إلى المنصة</button>
+          </form>
+          <div class="login-footnote"><span class="dot-online"></span><span>حفظ محلي + مزامنة تلقائية</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="appView" class="app-view hidden">
+    <header class="app-header">
+      <div class="header-title-wrap">
+        <button id="drawerBtn" class="header-icon" type="button" aria-label="فتح القائمة"></button>
+        <div class="header-copy">
+          <small id="headerManager">صاحب الحساب</small>
+          <h2 id="pageTitle">الرئيسية</h2>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button id="installBtn" class="header-install" type="button" title="تثبيت التطبيق" aria-label="تثبيت التطبيق"><span id="headerInstallIcon"></span><span>تثبيت</span></button>
+        <button id="quickSearchBtn" class="header-icon" type="button" title="بحث" aria-label="بحث"></button>
+      </div>
+    </header>
+
+    <aside id="drawer" class="drawer" aria-hidden="true">
+      <div class="drawer-handle"></div>
+      <div class="drawer-head">
+        <img src="logo.jpg" alt="الشعار">
+        <div><strong id="drawerAppName">الأحمدي</strong><small>إدارة عدادات الكهرباء</small></div>
+        <button id="drawerClose" class="drawer-close" type="button" aria-label="إغلاق"></button>
+      </div>
+      <nav id="drawerNav" class="drawer-nav"></nav>
+      <div class="drawer-foot">
+        <div id="cloudSyncStatus" class="drawer-sync-status"><span class="sync-dot"></span><div><strong>المزامنة</strong><small>جارٍ تجهيز الحالة...</small></div></div>
+        <button class="drawer-foot-action install" data-action="install-app" type="button"><span class="drawer-install-icon"></span><span>تثبيت التطبيق على الجهاز</span></button>
+        <button class="drawer-foot-action logout" data-action="logout" type="button"><span id="drawerLogoutIcon" class="drawer-install-icon"></span><span>تسجيل الخروج</span></button>
+        <div class="drawer-version">نسخة متزامنة • v13.12</div>
+      </div>
+    </aside>
+    <button id="drawerBackdrop" class="drawer-backdrop" type="button" aria-label="إغلاق القائمة"></button>
+
+    <main id="mainContent" class="main-content"></main>
+    <nav id="bottomNav" class="bottom-nav"></nav>
+  </section>
+
+  <div id="modalRoot"></div>
+  <div id="toastRoot" class="toast-root"></div>
+  <input id="backupImportInput" type="file" accept="application/json" hidden>
+
+  <script src="turso-config.js?v=13.12.0"></script>
+  <script src="turso-sync.js?v=13.12.0"></script>
+  <script src="app.js?v=13.12.0"></script>
+</body>
+</html>
